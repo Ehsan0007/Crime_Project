@@ -16,31 +16,21 @@ export function applicationReducer(state = initial_state, action) {
       state = newState;
       return state;
     }
-  //   case ActionTypes.requiredBloodRequestSuccess: {
-  //     var newState = Object.assign({}, state, { allBloods: action.data });
-  //     state = newState;
-  //     return state;
-  //   }
-  //   case ActionTypes.updateBloodRequestSuccess: {
-  //     var newState = Object.assign({}, state, { allBloods: action.data });
-  //     state = newState;
-  //     return state;
-  //   }
-  //   case ActionTypes.logOutRequestSuccess: {
-  //     var newState = Object.assign({});
-  //     state = newState;
-  //     return state;
-  //   }
-  //   case ActionTypes.loadUserRequest: {
-  //     var newState = Object.assign({}, state);
-  //     state = newState;
-  //     return state;
-  //   }
-  //   case ActionTypes.addReportRequestSuccess: {
-  //     var newState = Object.assign({}, state);
-  //     state = newState;
-  //     return state;
-  //   }
+
+    case ActionTypes.addReportRequestSuccess: {
+      var newState = Object.assign({}, state,{crime:action.data });
+      state = newState;
+      return state;
+    }
+      case ActionTypes.addedReportRequestSuccess : {
+    var newState = Object.assign({}, state);
+      newState.allCrimes = newState.allCrimes || [];
+      if(action.todos){
+        newState.allCrimes.push(action.todos);
+      }
+      state = newState;
+      return state;
+  }
   // case ActionTypes.loadCrimesRequestSuccess: {
   //     var newState = Object.assign({}, state, { allCrimes: action.data });
   //     state = newState;

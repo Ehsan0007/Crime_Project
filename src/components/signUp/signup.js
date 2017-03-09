@@ -11,7 +11,7 @@ import {
 } from 'react-router';
 
 class SignUp extends Component {
-    citiesGroup;
+   
     constructor(props) {
         super(props);
        
@@ -64,10 +64,11 @@ class SignUp extends Component {
         const { application } = this.props.application;
         return (
             <div className="main-login-div">
-                <mat.Card style={signupMain}>
-                    <mat.CardTitle title="SignUp" />
+               
+                <mat.Card className="signmain">
+                    <mat.CardTitle title="SignUp" className="text"/>
                     <mat.CardText>
-                        <p>Already Have account? <Link to="/login">Login</Link></p>
+                        {/*<p>Already Have account? <Link to="/login">Login</Link></p>*/}
                         <form onSubmit={this.handleSubmit} onChange={this.clearErrors}>
                             <h3>Account Info</h3>
                             <mat.Divider />

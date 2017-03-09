@@ -6,13 +6,12 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import LoginContainer from './containers/login';
 import SignUpContainer from './containers/signup';
-// import rootMainContainer from './containers/rootContainer';
-// import DashboardContainer from './containers/dashboard';
-// import AddReportContainer from './containers/addReports';
-// import ViewCrimeContainer from './containers/viewCrimes';
-// import LoadMyIncidentsContainer from './containers/loadMyIncidents';
-// import ViewAllCrimesContainer from './containers/viewAllCrimes';
-// import adminDashboardContainer from './containers/adminContainer';
+import Mainroot from './components/MainComponent/Mainroot'
+import CrimeReport from './components/CrimeReport/Crimereport'
+import Tables from './components/Table/table'
+import MainReport from './components/report/report'
+import AddReports from './components/report/Addreport'
+import AddReportContainer from './containers/Addreport'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
@@ -36,14 +35,19 @@ class RootComponent extends Component {
           <Provider store={store}>
             <Router history={browserHistory}>
 
-              <Route path="/" component={SignUpContainer}>
-                <IndexRedirect to="/login" />
+              <Route path="/" component={CrimeReport}>
+                  <IndexRoute component={Tables}></IndexRoute>
+                   <Route path="login"  component={LoginContainer}/>
+                   <Route path="signup"  component={SignUpContainer}/>
+                   <Route path="table"  component={Tables}/>
               </Route>
 
-              <Route path="/login" component={LoginContainer}>
-              </Route>
-              <Route path="/signup" component={SignUpContainer}>
-              </Route>
+               <Route path="/signup" component={SignUpContainer}></Route>
+
+               <Route path="/report" component={MainReport}>
+                <Route path="Addreport" component={AddReportContainer}></Route>
+               </Route>
+               
              
             </Router>
           </Provider>

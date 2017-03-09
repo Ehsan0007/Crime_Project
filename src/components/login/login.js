@@ -61,13 +61,23 @@ class Login extends Component {
             width : '60%',
             margin : '0 auto'
         }
+        const signup = {
+           float:'right',
+           height : 40,
+           marginTop : 20,
+           color : 'white',
+           backgroundColor : 'transparent',
+           margin : '10px',
+           fontWeight : 'bold',
+        }
         const { application } = this.props.application;
         return (
             <div className="main-login-div">
-                <mat.Card style={centerAlign}>
-                    <mat.CardTitle title="Login" />
+    
+                <mat.Card className="centerAlign">
+                    <mat.CardTitle title="Login" className="text" />
                     <mat.CardText>
-                        <p>Don`t Have account? <Link to="/signup">SignUp</Link></p>
+                        {/*<p>Don`t Have account? <Link to="/signup">SignUp</Link></p>*/}
                         <form onSubmit={this.handleSubmit} onChange={this.clearErrors}>
                             <mat.TextField
                                 hintText="test@test.com"

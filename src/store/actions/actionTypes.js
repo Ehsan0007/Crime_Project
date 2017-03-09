@@ -17,11 +17,11 @@ const actionTypes = {
   logOutRequestFailed: 'logOutRequestFailed',
   logOutRequestSuccess: 'logOutRequestSuccess',
 
-  // addedReportRequestSuccess: 'addedReportRequestSuccess',
+  addedReportRequestSuccess: 'addedReportRequestSuccess',
 
-  // addReportRequest: 'addReportRequest',
-  // addReportRequestFailed: 'addReportRequestFailed',
-  // addReportRequestSuccess: 'addReportRequestSuccess',
+  addReportRequest: 'addReportRequest',
+  addReportRequestFailed: 'addReportRequestFailed',
+  addReportRequestSuccess: 'addReportRequestSuccess',
 
   // updateReportRequest: 'updateReportRequest',
   // updateReportRequestFailed: 'updateReportRequestFailed',

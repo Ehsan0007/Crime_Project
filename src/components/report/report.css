@@ -1,0 +1,13 @@
+.cardwidht{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+/*.cardwidht{
+    text-align: center;
+}*/
+.card{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 50px
+}

@@ -1,6 +1,7 @@
 import ActionTypes from './actionTypes';
 import * as fbConfigs from '../../configs/dbconfigs';
 import {Link,browserHistory} from 'react-router'
+import MainReport from '../../components/report/report'
 
 export function SignUpRequest(SignUpData) {
     return dispatch => {
@@ -16,7 +17,7 @@ export function SignUpRequest(SignUpData) {
                     name: SignUpData.name, gender: SignUpData.gender == 1 ? "Male" : "Female", cellNumber: SignUpData.cellNumber
                 }, signUpSuccessData => {
                     dispatch(SignUpRequestSuccess({ uid: data.uid, userEmail: data.email, name: SignUpData.name, gender: SignUpData.gender == 1 ? "Male" : "Female",  cellNumber: SignUpData.cellNumber }));
-                    browserHistory.push('/login')
+                    browserHistory.push('/report')
                 });
             })
             .catch((error) => {
