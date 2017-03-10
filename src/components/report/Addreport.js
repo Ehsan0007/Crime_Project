@@ -9,7 +9,7 @@ class AddReports extends Component{
     constructor(props){
         super(props);
         this.state = {
-            name : '', gender:1 , cityname: "Washington" , incidentDate : new Date(),incidentTime : new Date(),inicidentType : 1
+            name : '', gender:1 ,inicidentType:1, cityname: "Washington" , incidentDate : new Date(),incidentTime : new Date(),
         }
         this.cities = [
             "Manchester",
@@ -59,11 +59,11 @@ class AddReports extends Component{
     handleSubmit(evt){
          evt.preventDefault();
          const name = this.refs.name.getValue();
-         const gender = this.state.gender ? "Male" : "Female";
-         const incidentdate = this.state.inicidentDate;
-         const incidenttime = this.state.incidentTime;
+         const gender = this.state.gender==1 ? "Male" : this.state.gender==2? "Female":"";
+         const incidentDate = this.state.inicidentDate;
+         const incidentTime = this.state.incidentTime;
         const cityname = this.state.cityname;
-         const incidentType = this.state.inicidentType;
+         const incidentType = this.state.inicidentType==1?"Crime" :this.state.incidentType==2?"Missing":this.state.incidentType==4?"Other":"Complian";
 
         
          const userAllData= {
@@ -72,8 +72,8 @@ class AddReports extends Component{
              name  : name,
              citynames :cityname,
              gender : gender,
-            //  incidentdate : incidentdate,
-            //  incidenttime : incidenttime,
+            //  incidentDate : incidentDate,
+            //  incidentTime : incidentTime,
               incidentType : incidentType,
          }
          this.props.addNewReports(userAllData);

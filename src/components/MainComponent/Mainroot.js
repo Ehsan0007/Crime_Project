@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as mat from 'material-ui';
+
 import {
     browserHistory,
     Router,
@@ -31,7 +32,7 @@ class Mainroot extends Component{
                         className="appbar"
                         title="Crime & Report Managment System"
                         iconClassNameRight="muidocs-icon-navigation-expand-more">
-                        <mat.RaisedButton label="ViewCrimeReport" primary={true} style={signup} />
+                        <Link to="viewReport"><mat.RaisedButton label="ViewCrimeReport" primary={true} style={signup} /></Link>
                         <mat.RaisedButton label="SignUp" primary={true} style={signup} />
                         <mat.RaisedButton label="Login" primary={true} style={signup} />
                 </mat.AppBar>

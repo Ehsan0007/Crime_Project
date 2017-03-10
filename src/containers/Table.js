@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ViewReport from '../components/report/viewReport';
+import Tables  from '../components/Table/table';
 import { loadInitialState } from '../store/actions/loadInitialState';
 import { childAddedHandler } from '../store/actions/childAddedHandler';
 // import { loadCrimesRequest } from '../store/actions/ViewReport';
@@ -22,6 +22,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const ViewAllCrimesContainer = connect(mapStateToProps, mapDispatchToProps)(ViewReport);
+const ViewAllCrimesContainers = connect(mapStateToProps, mapDispatchToProps)(Tables);
 
-export default ViewAllCrimesContainer;
+export default ViewAllCrimesContainers;

@@ -11,6 +11,8 @@ import CrimeReport from './components/CrimeReport/Crimereport'
 import Tables from './components/Table/table'
 import MainReport from './components/report/report'
 import AddReports from './components/report/Addreport'
+import ViewAllCrimesContainer from './containers/viewReport'
+import ViewAllCrimesContainers from './containers/Table'
 import AddReportContainer from './containers/Addreport'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -36,16 +38,20 @@ class RootComponent extends Component {
             <Router history={browserHistory}>
 
               <Route path="/" component={CrimeReport}>
-                  <IndexRoute component={Tables}></IndexRoute>
+                  <IndexRoute component={ViewAllCrimesContainers}></IndexRoute>
+                   <Route path="/viewReport" component={ViewAllCrimesContainers}></Route>
                    <Route path="login"  component={LoginContainer}/>
                    <Route path="signup"  component={SignUpContainer}/>
                    <Route path="table"  component={Tables}/>
               </Route>
 
                <Route path="/signup" component={SignUpContainer}></Route>
+              
+
 
                <Route path="/report" component={MainReport}>
                 <Route path="Addreport" component={AddReportContainer}></Route>
+                <Route path="viewReport" component={ViewAllCrimesContainer}></Route>
                </Route>
                
              

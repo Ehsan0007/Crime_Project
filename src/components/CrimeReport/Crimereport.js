@@ -28,7 +28,7 @@ class CrimeReport extends Component{
                         className="appbar"
                         title="Crime & Report Managment System"
                         iconClassNameRight="muidocs-icon-navigation-expand-more">
-                        <Link to="/table"><mat.RaisedButton label="ViewCrimeReport" primary={true} style={signup} /></Link>
+                        <Link to="/viewReport"><mat.RaisedButton label="ViewCrimeReport" primary={true} style={signup} /></Link>
                          <Link to="/signup"><mat.RaisedButton label="SignUp" primary={true} style={signup} /></Link>
                          <Link to="/login"><mat.RaisedButton label="Login" primary={true} style={signup} /></Link>
                 </mat.AppBar>

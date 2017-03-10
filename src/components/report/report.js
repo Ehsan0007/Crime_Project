@@ -29,7 +29,7 @@ class MainReport extends Component{
                         title="Crime & Report Managment System"
                         iconClassNameRight="muidocs-icon-navigation-expand-more">
                         <Link to="/report/Addreport"><mat.RaisedButton label="AddReport" primary={true} style={signup} /></Link>
-                         <Link to=""><mat.RaisedButton label="ViewReport" primary={true} style={signup} /></Link>
+                         <Link to="/report/viewReport"><mat.RaisedButton label="ViewReport" primary={true} style={signup} /></Link>
                          <Link to=""><mat.RaisedButton label="Logout" primary={true} style={signup} /></Link>
                 </mat.AppBar>
                  

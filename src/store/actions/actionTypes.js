@@ -36,9 +36,9 @@ const actionTypes = {
   // loadMyIncidentsRequestSuccess: 'loadMyIncidentsRequestSuccess',
 
 
-  // viewAllCrimesRequest: 'viewAllCrimesRequest',
-  // viewAllCrimesRequestFailed: 'viewAllCrimesRequestFailed',
-  // viewAllCrimesRequestSuccess: 'viewAllCrimesRequestSuccess',
+  viewAllCrimesRequest: 'viewAllCrimesRequest',
+  viewAllCrimesRequestFailed: 'viewAllCrimesRequestFailed',
+  viewAllCrimesRequestSuccess: 'viewAllCrimesRequestSuccess',
 
 
 
